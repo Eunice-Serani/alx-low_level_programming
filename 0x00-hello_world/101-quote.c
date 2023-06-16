@@ -6,6 +6,7 @@
  * Return: Always 1(Success)
  */
 int main(void)
+
 {
 
        write(2,
