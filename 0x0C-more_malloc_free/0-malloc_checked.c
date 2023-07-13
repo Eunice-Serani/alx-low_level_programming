@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * malloc_checked - allocates memory
- * @b: nummber of bytes
+ * malloc_checked - allocates memory using malloc
+ * @b: nummber of bytes to allocate
  *
  * Return: a pointer to the allocated memory
  */
-void *malloc_checked(unsighned int b)
+void *malloc_checked(unsigned int b)
 {
 	void *memory;
 
