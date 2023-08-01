@@ -42,6 +42,8 @@ size_t looped_listint_len(const listint_t *head)
 				nodes++;
 				pet = pet->next;
 			}
+			if (!head)
+				exit(98);
 
 			return (nodes);
 		}
@@ -55,7 +57,7 @@ size_t looped_listint_len(const listint_t *head)
 
 /**
  * print_listint_safe - Prints a listint_t safely
- * @head: Points to the head of listint_t list
+ * @head: Points to the first head of listint_t list
  *
  * Return: Numb of nodes in a list
  */
