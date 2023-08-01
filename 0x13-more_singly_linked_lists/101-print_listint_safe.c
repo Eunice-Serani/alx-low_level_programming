@@ -15,41 +15,39 @@ size_t looped_listint_len(const listint_t *head);
  */
 size_t looped_listint_len(const listint_t *head)
 {
-	const listint_t *pet, *bird;
+	const listint_t *slow, *fast;
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
 
-	pet = head->next;
-	bird = (head->next)->next;
+	slow = head->next;
+	fast = (head->next)->next;
 
-	while (bird)
+	while (fast)
 	{
-		if (pet == bird)
+		if (slow == fast)
 		{
-			pet = head;
-			while (pet != bird)
+			slow = head;
+			while (slow != fast)
 			{
 				nodes++;
-				pet = pet->next;
-				bird = bird->next;
+				slow = slow->next;
+				fast = fast->next;
 			}
 
-			pet = pet->next;
-			while (pet != bird)
+			slow = slow->next;
+			while (slow != fast)
 			{
 				nodes++;
-				pet = pet->next;
+				slow = slow->next;
 			}
-			if (!head)
-				exit(98);
 
 			return (nodes);
 		}
 
-		pet = pet->next;
-		bird = (bird->next)->next;
+		slow = slow->next;
+		fast = (fast->next)->next;
 	}
 
 	return (0);
