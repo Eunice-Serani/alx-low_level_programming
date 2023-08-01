@@ -2,16 +2,16 @@
 #include "lists.h"
 #include <stdio.h>
 
-size_t print_listint_safe(const listint_t *head);
 size_t looped_listint_len(const listint_t *head);
+size_t print_listint_safe(const listint_t *head);
 
 /**
- * looped_listint_len - this counts the numb of unique nodes
+ * looped_listint_len - this counts the number of unique nodes
  *    in a looped listint_t list
  * @head: points to head of the listint_t to check in the linked list
  *
  * Return: the list if not looped - 0
- * Likewise - numb of unique nodes in the list
+ * otherwise - number of unique nodes in the list
  */
 size_t looped_listint_len(const listint_t *head)
 {
