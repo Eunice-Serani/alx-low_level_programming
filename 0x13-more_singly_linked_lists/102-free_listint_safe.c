@@ -29,12 +29,14 @@ size_t free_listint_safe(listint_t **h)
 		{
 			temp = (*h)->next;
 			free(*h);
-			*h = temp;
+			*h = NULL;
 			len++;
 			if (i == 0)
 			break;
 		}
 	}
+
+	*h = NULL;
 
 	return (len);
 }
