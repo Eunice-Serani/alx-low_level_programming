@@ -21,12 +21,10 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		printf("[%p] %d\n", (void *)new_temp_n, new_temp_n->n);
 		new_node++;
-
 		new_temp_n = new_temp_n->next;
 		new_l_n = head;
 		new_new_n = 0;
-
-		while (new_new_n <= new_node)
+		while (new_new_n < new_node)
 		{
 			if (new_temp_n == new_l_n)
 			{
