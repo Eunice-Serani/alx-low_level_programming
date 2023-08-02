@@ -26,7 +26,7 @@ size_t print_listint_safe(const listint_t *head)
 		new_l_n = head;
 		new_new_n = 0;
 
-		while (new_new_n < new_node)
+		while (new_new_n <= new_node)
 		{
 			if (new_temp_n == new_l_n)
 			{
