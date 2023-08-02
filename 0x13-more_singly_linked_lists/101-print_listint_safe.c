@@ -5,7 +5,7 @@
  *  with a loop safely
  * @head: Points to the first node of a list
  *
- * Return: Number of new nodes in a list
+ * Return: Number of new nodes in a list, exit status 98 if it fails
  */
 size_t print_listint_safe(const listint_t *head)
 {
