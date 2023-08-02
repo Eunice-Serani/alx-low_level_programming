@@ -1,11 +1,7 @@
 #include "lists.h"
 
-size_t looped_listint_len(const listint_t *head);
-size_t print_listint_safe(const listint_t *head);
-
 /**
- * looped_listint_len - Counts the number of nodes in a looped list
- * size_t print_listint_safe - Function that prints a linked list
+ * print_listint_safe - Function that prints a linked list
  *  with a loop safely
  * @head: Points to the first node of a list
  *
@@ -13,7 +9,6 @@ size_t print_listint_safe(const listint_t *head);
  */
 size_t print_listint_safe(const listint_t *head)
 {
-
 	const listint_t *new_temp_n = NULL;
 
 	 const listint_t *new_l_n = NULL;
