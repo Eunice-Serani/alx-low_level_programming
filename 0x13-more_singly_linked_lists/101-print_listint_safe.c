@@ -9,14 +9,12 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow = head;
-	const listint_t *fast = head;
+	const listint_t *slow = head, *fast = head, *stop;
 	size_t node_count = 0;
 	int flag = 0;
-	const listint_t *stop;
 
 	if (head == NULL)
-		exit(98);
+		return (0);
 	while (fast != NULL && fast->next != NULL)
 	{
 		slow = slow->next;
@@ -39,10 +37,12 @@ size_t print_listint_safe(const listint_t *head)
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		node_count++;
-
 		if (head == stop && flag == 0)
+		{
 			flag++;
-		else if (head == stop && flag == 1)
+			continue;
+		}
+		if (head == stop && flag == 1)
 		{
 			printf("-> [%p] %d\n", (void *)stop, stop->n);
 			break;
