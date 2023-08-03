@@ -15,11 +15,12 @@ size_t print_listint_safe(const listint_t *head)
 	int flag = 0;
 	const listint_t *stop;
 
+	if (head == NULL)
+		return (0);
 	while (fast != NULL && fast->next != NULL)
 	{
 		slow = slow->next;
 		fast = (fast->next)->next;
-
 		if (slow == fast)
 		{
 			slow = head;
