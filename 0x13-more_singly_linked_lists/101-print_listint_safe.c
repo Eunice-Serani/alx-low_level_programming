@@ -9,43 +9,33 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow = head, *fast = head, *stop;
-	size_t node_count = 0;
-	int flag = 0;
+	const listint_t *new_temp_n = NULL;
+	const listint_t *new_l_n = NULL;
 
-	while (fast != NULL && fast->next != NULL)
+	size_t new_curr = 0;
+	size_t new_new_n;
+
+	new_temp_n = head;
+	while (new_temp_n)
 	{
-		slow = slow->next;
-		fast = (fast->next)->next;
-		if (slow == fast)
+		printf("[%p] %d\n", (void *)new_temp_n, new_temp_n->n);
+		new_curr++;
+		new_temp_n = new_temp_n->next;
+		new_l_n = head;
+		new_new_n = 0;
+		while (new_new_n < new_curr)
 		{
-			slow = head;
-			while (slow != fast)
+			if (new_temp_n == new_l_n)
 			{
-				slow = slow->next;
-				fast = fast->next;
+				printf("-> [%p] %d\n", (void *)new_temp_n, new_temp_n->n);
+				return (new_curr);
 			}
-			stop = slow;
-			break;
+			new_l_n = new_l_n->next;
+			new_new_n++;
 		}
-	}
-	if (head == NULL)
+
+		if (!head)
 		exit(98);
-	while (head != NULL)
-	{
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-		node_count++;
-		if (head == stop && flag == 0)
-		{
-			flag++;
-			continue;
-		}
-		if (head == stop && flag == 1)
-		{
-			printf("-> [%p] %d\n", (void *)stop, stop->n);
-			break;
-		}
 	}
-	return (node_count);
+	return (new_curr);
 }
