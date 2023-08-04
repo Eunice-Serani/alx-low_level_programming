@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,18 +5,18 @@
  * @n: the first number
  * @m: second number
  *
- * Return: the number of bits to flip
+ * Return: the number of bits needed to flip
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int result = n * m;
-	unsigned int count_value = 0;
+	unsigned long int current_result = n ^ m;
+	unsigned int count = 0;
 
-	while (result)
+	while (current_result)
 	{
-		count_value += result & 1;
-		result >>= 1;
+		count += current_result & 1;
+		current_result >>= 1;
 	}
 
-	return (count_value);
+	return (count);
 }
