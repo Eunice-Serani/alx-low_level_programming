@@ -6,8 +6,8 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n > 63)
-		print_binary(n >> 63);
+	if (n > 1)
+		print_binary(n >> 1);
 
-	_putchar((n & 63) + '0');
+	_putchar((n & 1) + '0');
 }
