@@ -8,14 +8,23 @@
 #include <stdlib.h>
 
 void check_elf(unsigned char *e_ident);
+
 void print_magic(unsigned char *e_ident);
+
 void print_class(unsigned char *e_ident);
+
 void print_data(unsigned char *e_ident);
+
 void print_version(unsigned char *e_ident);
+
 void print_abi(unsigned char *e_ident);
+
 void print_osabi(unsigned char *e_ident);
+
 void print_type(unsigned int e_type, unsigned char *e_ident);
+
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
+
 void close_elf(int elf);
 
 /**
@@ -245,7 +254,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 }
 
 /**
- * close_elf - closes an ELF file
+ * close_elf - this closes an ELF file
  * @elf: the file descriptor of the ELF file
  *
  * Description: if the file does not close - exit code 98
