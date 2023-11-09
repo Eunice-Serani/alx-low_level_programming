@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint - this adds a new node at the beginning of a linked list
- * @head: points to the first node in the list
- * @n: shows the data to insert in the new node
+ * add_dnodeint - this adds a new node at the beginning of a dlistint_t list
+ * @head: head of the list
+ * @n: shows the value of the element
  *
  * Return: the address to the new node, or NULL if it failed
  */
