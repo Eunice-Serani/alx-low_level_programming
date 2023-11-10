@@ -7,7 +7,7 @@
  * @index: index of the node to delete
  * @head: points to the first element in the linked list
  *
- * Return: 1 (Success), or -1 (Fail)
+ * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
