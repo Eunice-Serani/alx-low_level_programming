@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P /tmp/ https://raw.githubusercontent.com/Eunice-Serani/alx-low_level_programming/master/0x18-dynamic_libraries/jackpot.so
-export LD_PRELOAD=/tmp/jackpot.so
+wget -P
+export LD_PRELOAD=/$PWD/libhack.so ./gm 9 8 10 24 75 9
